@@ -1,7 +1,5 @@
 package com.alexander.networking.data;
 
-import android.arch.persistence.room.Room;
-
 import com.alexander.networking.App;
 import com.alexander.networking.data.model.Weather;
 import com.alexander.networking.domain.repository.WeatherRepository;
@@ -15,13 +13,15 @@ public class ForecastRepository implements WeatherRepository {
     private List<Weather> forecasts;
 
     @Override
-    public List<Weather> getWeather() throws IOException {
+    public List<Weather> getWeather(){
         db = App.getInstance().getDatabase();
-        forecasts = new ApiMapper(new RetrofitHelper()).getWeather();
-        if (forecasts != null) {
-            db.getWeatherDAO().insert(forecasts);
-        }
-        else {
+        try {
+            forecasts = new ApiMapper(new RetrofitHelper()).getWeather();
+            if (forecasts != null && !forecasts.isEmpty()) {
+                db.getWeatherDAO().delete();
+                db.getWeatherDAO().insert(forecasts);
+            }
+        } catch (IOException e){
             forecasts = db.getWeatherDAO().getForecast();
         }
         return forecasts;

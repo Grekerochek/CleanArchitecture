@@ -4,7 +4,6 @@ import com.alexander.networking.data.model.Weather;
 import com.alexander.networking.domain.executors.Executor;
 import com.alexander.networking.domain.executors.MainThread;
 import com.alexander.networking.domain.interactors.GetItemWeatherInteractor;
-import com.alexander.networking.domain.interactors.GettingInteractor;
 import com.alexander.networking.domain.interactors.IGettingInteractor;
 import com.alexander.networking.domain.interactors.Interactor;
 import com.alexander.networking.domain.repository.WeatherRepository;

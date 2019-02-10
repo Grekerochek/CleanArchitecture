@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.alexander.networking.data.ForecastRepository;
 import com.alexander.networking.domain.executors.ThreadExecutor;
-import com.alexander.networking.presentation.CustomItemDecorator;
 import com.alexander.networking.R;
 import com.alexander.networking.data.model.Weather;
-import com.alexander.networking.presentation.Adapter;
 import com.alexander.networking.presentation.IPresenter;
 import com.alexander.networking.threads.MainThreadAnd;
 

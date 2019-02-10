@@ -3,8 +3,6 @@ package com.alexander.networking.domain.interactors;
 import com.alexander.networking.domain.executors.Executor;
 import com.alexander.networking.domain.executors.MainThread;
 
-import java.io.IOException;
-
 public abstract class AbstractInteractor implements Interactor {
 
     public Executor executor;

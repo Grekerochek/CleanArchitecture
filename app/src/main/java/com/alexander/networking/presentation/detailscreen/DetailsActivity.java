@@ -11,10 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.alexander.networking.R;
-import com.alexander.networking.ServiceDB;
 import com.alexander.networking.data.ForecastRepository;
 import com.alexander.networking.data.model.Weather;
-import com.alexander.networking.domain.executors.MainThread;
 import com.alexander.networking.domain.executors.ThreadExecutor;
 import com.alexander.networking.presentation.IPresenter;
 import com.alexander.networking.threads.MainThreadAnd;
@@ -27,7 +25,6 @@ public class DetailsActivity extends AppCompatActivity implements IPresenter.Vie
     private static String VALUE = "value";
     private String time;
     private long timeUn;
-    private Weather weather;
     private Toolbar toolbar;
     private TextView text;
     private ProgressBar progressBar;

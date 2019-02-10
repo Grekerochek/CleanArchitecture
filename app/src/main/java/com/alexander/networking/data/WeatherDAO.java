@@ -27,4 +27,7 @@ public interface WeatherDAO {
 
     @Delete
     void delete(Weather weather);
+
+    @Query("delete from forecast")
+    void delete();
 }

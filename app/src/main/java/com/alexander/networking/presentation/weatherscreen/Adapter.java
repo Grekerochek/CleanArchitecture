@@ -1,4 +1,4 @@
-package com.alexander.networking.presentation;
+package com.alexander.networking.presentation.weatherscreen;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

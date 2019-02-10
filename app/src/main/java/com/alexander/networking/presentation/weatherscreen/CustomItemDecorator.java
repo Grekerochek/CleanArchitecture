@@ -1,4 +1,4 @@
-package com.alexander.networking.presentation;
+package com.alexander.networking.presentation.weatherscreen;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
